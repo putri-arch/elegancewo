@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Wedding Organizer - Paket & Decor Wedding</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS (untuk Image Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif-custom {
+            font-family: 'Playfair Display', serif;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="font-serif-custom text-2xl font-bold tracking-wider text-rose-900">
+                    Elegance<span class="text-rose-500">WO</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 font-medium text-sm text-stone-600">
+                    <a href="#hero" class="hover:text-rose-700 transition">Beranda</a>
+                    <a href="#about" class="hover:text-rose-700 transition">Tentang Kami</a>
+                    <a href="#services" class="hover:text-rose-700 transition">Layanan & Dekorasi</a>
+                    <a href="#gallery" class="hover:text-rose-700 transition">Galeri</a>
+                    <a href="#contact" class="hover:text-rose-700 transition">Kontak</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-rose-800 text-white px-5 py-2.5 rounded-full text-sm hover:bg-rose-900 transition shadow-sm">Konsultasi Gratis</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-stone-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block text-stone-600 hover:text-rose-800 py-1">Beranda</a>
+            <a href="#about" class="block text-stone-600 hover:text-rose-800 py-1">Tentang Kami</a>
+            <a href="#services" class="block text-stone-600 hover:text-rose-800 py-1">Layanan & Dekorasi</a>
+            <a href="#gallery" class="block text-stone-600 hover:text-rose-800 py-1">Galeri</a>
+            <a href="#contact" class="block text-stone-600 hover:text-rose-800 py-1">Kontak</a>
+            <a href="#contact" class="inline-block bg-rose-800 text-white px-5 py-2 rounded-full text-sm mt-2">Konsultasi Gratis</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section dengan Image Slider -->
+    <section id="hero" class="relative pt-20">
+        <div class="swiper heroSlider h-[85vh] w-full">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <!-- GANTI URL GAMBAR DI SINI -->
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80" alt="Pernikahan 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-center p-4">
+                        <div class="max-w-3xl text-white">
+                            <p class="text-xs sm:text-sm tracking-widest uppercase mb-2 text-rose-200">Momen Sekali Seumur Hidup</p>
+                            <h1 class="font-serif-custom text-3xl sm:text-5xl md:text-6xl font-normal leading-tight mb-4">Wujudkan Pernikahan Impian Anda</h1>
+                            <p class="text-stone-200 text-sm sm:text-lg mb-6 max-w-xl mx-auto">Kami merancang dan mengelola setiap detail pernikahan Anda dengan sempurna dan tanpa stres.</p>
+                            <a href="#services" class="inline-block bg-rose-700 hover:bg-rose-800 text-white px-7 py-3 rounded-full text-sm font-medium transition shadow-lg">Pilih Paket Dekorasi</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative">
+                    <!-- GANTI URL GAMBAR DI SINI -->
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80" alt="Pernikahan 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-center p-4">
+                        <div class="max-w-3xl text-white">
+                            <p class="text-xs sm:text-sm tracking-widest uppercase mb-2 text-rose-200">Kreatif & Elegan</p>
+                            <h1 class="font-serif-custom text-3xl sm:text-5xl md:text-6xl font-normal leading-tight mb-4">Dekorasi Elegan Penuh Makna</h1>
+                            <p class="text-stone-200 text-sm sm:text-lg mb-6 max-w-xl mx-auto">Sentuhan estetika tinggi sesuai konsep impian Anda dan pasangan.</p>
+                            <a href="#gallery" class="inline-block bg-rose-700 hover:bg-rose-800 text-white px-7 py-3 rounded-full text-sm font-medium transition shadow-lg">Lihat Portofolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative">
+                    <!-- GANTI URL GAMBAR DI SINI -->
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1600&q=80" alt="Pernikahan 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-center p-4">
+                        <div class="max-w-3xl text-white">
+                            <p class="text-xs sm:text-sm tracking-widest uppercase mb-2 text-rose-200">Pelayanan Profesional</p>
+                            <h1 class="font-serif-custom text-3xl sm:text-5xl md:text-6xl font-normal leading-tight mb-4">Tim Berpengalaman & Terpercaya</h1>
+                            <p class="text-stone-200 text-sm sm:text-lg mb-6 max-w-xl mx-auto">Pendampingan penuh dari tahap perencanaan hingga acara berakhir.</p>
+                            <a href="#services" class="inline-block bg-rose-700 hover:bg-rose-800 text-white px-7 py-3 rounded-full text-sm font-medium transition shadow-lg">Layanan Kami</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Pagination & Navigation Slider -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-white opacity-70 hover:opacity-100 transition"></div>
+            <div class="swiper-button-prev text-white opacity-70 hover:opacity-100 transition"></div>
+        </div>
+    </section>
+
+  <!-- ================= SEKSI TENTANG KAMI ================= -->
+  <section id="about" class="hover:text-rose-700 transition">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="text-rose-500 text-sm font-semibold tracking-widest uppercase">Tentang Kami</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">
+        Mewujudkan Pernikahan Impian Anda ✨
+      </h2>
+      <div class="w-16 h-1 bg-rose-400 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Deskripsi & Foto Utama -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
+      <div class="space-y-4 text-slate-600 leading-relaxed">
+        <p>
+          Di <strong class="text-slate-900">[Nama Bisnis Anda]</strong>, kami percaya bahwa setiap pasangan memiliki cerita cinta yang unik. Berdiri sejak tahun <span class="font-semibold text-rose-500">[Tahun]</span>, kami adalah tim dekorator dan <em>wedding planner</em> profesional yang berdedikasi untuk menyulap momen bahagia Anda menjadi kenangan visual yang tak terlupakan.
+        </p>
+        <p>
+          Dari konsep klasik yang elegan, <em>rustic</em> yang hangat, hingga modern minimalis, kami memadukan kreativitas, detail presisi, dan estetika tinggi untuk menghidupkan suasana pernikahan impian Anda.
+        </p>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" 
+             alt="Tim Dekorasi" 
+             class="rounded-2xl shadow-xl object-cover w-full h-80">
+      </div>
+    </div>
+
+
+    <!-- Visi & Misi -->
+    <div class="bg-rose-50/60 rounded-2xl p-8 border border-rose-100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-rose-900 mb-2">Visi Kami</h4>
+          <blockquote class="italic text-slate-700 border-l-4 border-rose-400 pl-4">
+            "Menjadi mitra dekorasi pernikahan terpercaya yang menginspirasi melalui keindahan, inovasi desain, dan pelayanan berkelas."
+          </blockquote>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-rose-900 mb-2">Misi Kami</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-1 text-sm">
+            <li>Memberikan hasil dekorasi terbaik melampaui ekspektasi.</li>
+            <li>Menjaga komitmen ketepatan waktu & kerapihan kerja.</li>
+            <li>Konsultasi ramah dan fleksibel sesuai anggaran klien.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+    <!-- Services & Decor Packages Section -->
+    <section id="services" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-semibold text-rose-800 uppercase tracking-widest">Layanan & Paket Dekorasi</span>
+            <h2 class="font-serif-custom text-3xl sm:text-4xl text-stone-900 mt-2 mb-4">Pilihan Konsep & Paket Dekorasi</h2>
+            <p class="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto mb-12">Klik paket di bawah ini untuk melihat detail lengkap fasilitas include (jumlah kursi, meja, foto dekorasi gate/depan, meja tamu, photo booth, dll).</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Modern Minimalist -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden h-60">
+                            <!-- GANTI URL GAMBAR DI SINI -->
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Modern Minimalist" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-4 left-4 bg-rose-900/90 text-white text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm">Konsep Modern</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif-custom text-2xl font-bold text-stone-900 mb-1">Paket Modern Minimalist</h3>
+                            <p class="text-stone-500 text-xs mb-4">Cocok untuk Intimate & Home Wedding yang simpel namun estetik</p>
+                            <div class="mb-4">
+                                <span class="text-xs text-stone-400 block">Mulai Dari</span>
+                                <span class="text-2xl font-bold text-rose-800">Rp 15.000.000</span>
+                            </div>
+                            <ul class="text-xs text-stone-600 space-y-2 border-t border-stone-100 pt-4">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Pelaminan Minimalis 4-6 Meter</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Welcome Gate & Hiasan Depan Rumah</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Photo Booth Minimalis</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Set Meja Penerima Tamu & Kursi Futura</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('modal-1')" class="w-full bg-rose-800 hover:bg-rose-900 text-white py-3 rounded-xl font-medium text-sm transition text-center shadow-md flex items-center justify-center gap-2">
+                            <span>Lihat Detail Rincian Paket</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Classic Rustic -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left flex flex-col justify-between group border-2 border-rose-200 relative">
+                    <span class="absolute top-3 right-3 bg-rose-600 text-white text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded shadow">Terfavorit</span>
+                    <div>
+                        <div class="relative overflow-hidden h-60">
+                            <!-- GANTI URL GAMBAR DI SINI -->
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Classic Rustic" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-4 left-4 bg-rose-900/90 text-white text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm">Konsep Rustic</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif-custom text-2xl font-bold text-stone-900 mb-1">Paket Classic Rustic</h3>
+                            <p class="text-stone-500 text-xs mb-4">Nuansa kayu hangat & bunga pilihan, cocok untuk gedung maupun rumah</p>
+                            <div class="mb-4">
+                                <span class="text-xs text-stone-400 block">Mulai Dari</span>
+                                <span class="text-2xl font-bold text-rose-800">Rp 25.000.000</span>
+                            </div>
+                            <ul class="text-xs text-stone-600 space-y-2 border-t border-stone-100 pt-4">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Pelaminan Rustic Mewah 6-8 Meter</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Pergola Depan Rumah / Gate Lengkung</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Photo Booth Tematik 3D</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Set Meja VIP, Meja Tamu, & 100 Kursi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('modal-2')" class="w-full bg-rose-800 hover:bg-rose-900 text-white py-3 rounded-xl font-medium text-sm transition text-center shadow-md flex items-center justify-center gap-2">
+                            <span>Lihat Detail Rincian Paket</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Royal Elegant -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden h-60">
+                            <!-- GANTI URL GAMBAR DI SINI -->
+                            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Royal Elegant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-4 left-4 bg-rose-900/90 text-white text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm">Konsep Luxury</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif-custom text-2xl font-bold text-stone-900 mb-1">Paket Royal Elegant</h3>
+                            <p class="text-stone-500 text-xs mb-4">Kemewahan maksimal dengan dekorasi bunga segar & pencahayaan megah</p>
+                            <div class="mb-4">
+                                <span class="text-xs text-stone-400 block">Mulai Dari</span>
+                                <span class="text-2xl font-bold text-rose-800">Rp 45.000.000</span>
+                            </div>
+                            <ul class="text-xs text-stone-600 space-y-2 border-t border-stone-100 pt-4">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Pelaminan Grand Luxury 10-12 Meter</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Full Lorong Entrance & Gate Megah</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Premium Photo Booth Interactive</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-rose-600 mr-2"></i> Full Set Meja VIP, Prasmanan, & 200 Kursi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('modal-3')" class="w-full bg-rose-800 hover:bg-rose-900 text-white py-3 rounded-xl font-medium text-sm transition text-center shadow-md flex items-center justify-center gap-2">
+                            <span>Lihat Detail Rincian Paket</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detail Paket 1: Modern Minimalist -->
+    <div id="modal-1" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-1')" class="absolute top-4 right-4 bg-stone-100 hover:bg-rose-100 text-stone-600 hover:text-rose-900 rounded-full w-10 h-10 flex items-center justify-center transition z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="p-6 sm:p-8">
+                <div class="border-b border-stone-200 pb-4 mb-6">
+                    <span class="text-xs font-semibold text-rose-800 uppercase tracking-widest">Detail Rincian Paket</span>
+                    <h3 class="font-serif-custom text-2xl sm:text-3xl font-bold text-stone-900">Paket Modern Minimalist</h3>
+                    <p class="text-rose-800 font-bold text-xl mt-1">Rp 15.000.000</p>
+                </div>
+
+                <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-rose-700"></i> Visual Contoh Dekorasi Termasuk
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <!-- Hiasan Depan Rumah -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Hiasan Depan Rumah" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">1. Hiasan Depan Rumah / Welcome Gate</h5>
+                        <p class="text-[11px] text-stone-500">Gapura kain minimalis dengan sentuhan bunga & welcome board nama pengantin.</p>
+                    </div>
+
+                    <!-- Hiasan Meja -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1510076803423-137b01d32a39?auto=format&fit=crop&w=600&q=80" alt="Hiasan Meja" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">2. Hiasan Meja Penerima Tamu & VIP</h5>
+                        <p class="text-[11px] text-stone-500">Centerpiece vas bunga kecil, taplak meja linen premium, & kotak angpau estetik.</p>
+                    </div>
+
+                    <!-- Photo Booth -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Photo Booth" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">3. Konsep Photo Booth</h5>
+                        <p class="text-[11px] text-stone-500">Backdrop kayu / kain pastel 2x2.5 meter dengan lighting Warm White & panggung mini.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/60 rounded-xl p-6 border border-rose-100 mb-8">
+                    <h4 class="font-bold text-stone-900 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-rose-700"></i> Fasilitas & Barang Yang Di-Include:
+                    </h4>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-stone-700">
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-chair text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Kursi:</strong> &nbsp;50 Unit Kursi Futura + Cover Ketat Busa</li>
+                            <li class="flex items-start"><i class="fa-solid fa-table text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Meja:</strong> &nbsp;2 Meja Penerima Tamu + 2 Meja Bulat VIP</li>
+                            <li class="flex items-start"><i class="fa-solid fa-archway text-rose-700 mt-1 mr-2.5"></i> <strong>Pelaminan:</strong> &nbsp;Panjang 4-6 meter (Custom Tema Warna)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-box text-rose-700 mt-1 mr-2.5"></i> <strong>Kotak Uang:</strong> &nbsp;2 Unit Kotak Angpau Kunci Terkunci</li>
+                        </ul>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-lightbulb text-rose-700 mt-1 mr-2.5"></i> <strong>Pencahayaan:</strong> &nbsp;Full Lighting Spot & ParLED Pelaminan</li>
+                            <li class="flex items-start"><i class="fa-solid fa-fan text-rose-700 mt-1 mr-2.5"></i> <strong>Pendingin:</strong> &nbsp;2 Unit Cooling Fan / Blower Air</li>
+                            <li class="flex items-start"><i class="fa-solid fa-carpet text-rose-700 mt-1 mr-2.5"></i> <strong>Karpet Jalan:</strong> &nbsp;Karpet Merah / Rose Gold 10 Meter</li>
+                            <li class="flex items-start"><i class="fa-solid fa-truck text-rose-700 mt-1 mr-2.5"></i> <strong>Lainnya:</strong> &nbsp;Gratis Biaya Bongkar Pasang & Transportasi Kota</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-end gap-3 border-t border-stone-200 pt-4">
+                    <button onclick="closeModal('modal-1')" class="px-5 py-2.5 rounded-xl text-stone-600 hover:bg-stone-100 text-sm font-medium transition">Tutup</button>
+                    <a href="#contact" onclick="closeModal('modal-1')" class="bg-rose-800 hover:bg-rose-900 text-white px-6 py-2.5 rounded-xl text-sm font-medium transition text-center">Pesan Paket Ini Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detail Paket 2: Classic Rustic -->
+    <div id="modal-2" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-2')" class="absolute top-4 right-4 bg-stone-100 hover:bg-rose-100 text-stone-600 hover:text-rose-900 rounded-full w-10 h-10 flex items-center justify-center transition z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="p-6 sm:p-8">
+                <div class="border-b border-stone-200 pb-4 mb-6">
+                    <span class="text-xs font-semibold text-rose-800 uppercase tracking-widest">Detail Rincian Paket</span>
+                    <h3 class="font-serif-custom text-2xl sm:text-3xl font-bold text-stone-900">Paket Classic Rustic</h3>
+                    <p class="text-rose-800 font-bold text-xl mt-1">Rp 25.000.000</p>
+                </div>
+
+                <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-rose-700"></i> Visual Contoh Dekorasi Termasuk
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <!-- Hiasan Depan Rumah -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Hiasan Depan Rumah" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">1. Gate Pergola Depan Rumah</h5>
+                        <p class="text-[11px] text-stone-500">Pergola kayu / besi lengkung melingkar dengan rangkaian bunga segar di pintu masuk.</p>
+                    </div>
+
+                    <!-- Hiasan Meja -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Hiasan Meja" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">2. Hiasan Meja Tamu & Prasmanan</h5>
+                        <p class="text-[11px] text-stone-500">Rustic table runner, lilin aromaterapi, susunan bunga segar & tempat menu eksklusif.</p>
+                    </div>
+
+                    <!-- Photo Booth -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80" alt="Photo Booth" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">3. Photo Booth 3D Rustic</h5>
+                        <p class="text-[11px] text-stone-500">Backdrop kayu rustic 3x2.5 meter lengkap dengan sofa vintage & standing lamp warmth.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/60 rounded-xl p-6 border border-rose-100 mb-8">
+                    <h4 class="font-bold text-stone-900 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-rose-700"></i> Fasilitas & Barang Yang Di-Include:
+                    </h4>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-stone-700">
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-chair text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Kursi:</strong> &nbsp;100 Unit Kursi Futura + Cover & Pita Warna</li>
+                            <li class="flex items-start"><i class="fa-solid fa-table text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Meja:</strong> &nbsp;4 Meja Tamu Bulat + 1 Set Meja Akad Nikah</li>
+                            <li class="flex items-start"><i class="fa-solid fa-archway text-rose-700 mt-1 mr-2.5"></i> <strong>Pelaminan:</strong> &nbsp;Panjang 6-8 meter Semi Fresh Flower</li>
+                            <li class="flex items-start"><i class="fa-solid fa-utensils text-rose-700 mt-1 mr-2.5"></i> <strong>Dekor Katering:</strong> &nbsp;1 Set Dekorasi Meja Prasmanan & Alat Pemanas</li>
+                        </ul>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-lightbulb text-rose-700 mt-1 mr-2.5"></i> <strong>Pencahayaan:</strong> &nbsp;Full Ambient Lighting + Chandeliers Gantung</li>
+                            <li class="flex items-start"><i class="fa-solid fa-fan text-rose-700 mt-1 mr-2.5"></i> <strong>Pendingin:</strong> &nbsp;4 Unit Blower AC Portable</li>
+                            <li class="flex items-start"><i class="fa-solid fa-road text-rose-700 mt-1 mr-2.5"></i> <strong>Standing Flower:</strong> &nbsp;6 Unit Standing Flower Sepanjang Karpet</li>
+                            <li class="flex items-start"><i class="fa-solid fa-gift text-rose-700 mt-1 mr-2.5"></i> <strong>Bonus:</strong> &nbsp;Free Janur Kuning 1 Pasang & Buku Tamu Custom</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-end gap-3 border-t border-stone-200 pt-4">
+                    <button onclick="closeModal('modal-2')" class="px-5 py-2.5 rounded-xl text-stone-600 hover:bg-stone-100 text-sm font-medium transition">Tutup</button>
+                    <a href="#contact" onclick="closeModal('modal-2')" class="bg-rose-800 hover:bg-rose-900 text-white px-6 py-2.5 rounded-xl text-sm font-medium transition text-center">Pesan Paket Ini Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detail Paket 3: Royal Elegant -->
+    <div id="modal-3" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-3')" class="absolute top-4 right-4 bg-stone-100 hover:bg-rose-100 text-stone-600 hover:text-rose-900 rounded-full w-10 h-10 flex items-center justify-center transition z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="p-6 sm:p-8">
+                <div class="border-b border-stone-200 pb-4 mb-6">
+                    <span class="text-xs font-semibold text-rose-800 uppercase tracking-widest">Detail Rincian Paket</span>
+                    <h3 class="font-serif-custom text-2xl sm:text-3xl font-bold text-stone-900">Paket Royal Elegant</h3>
+                    <p class="text-rose-800 font-bold text-xl mt-1">Rp 45.000.000</p>
+                </div>
+
+                <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-rose-700"></i> Visual Contoh Dekorasi Termasuk
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <!-- Hiasan Depan Rumah -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Hiasan Depan Rumah" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">1. Tunnel Entrance Depan Rumah</h5>
+                        <p class="text-[11px] text-stone-500">Lorong gantung penuh bunga segar & lampu kristal sepanjang 6 meter dari pintu masuk.</p>
+                    </div>
+
+                    <!-- Hiasan Meja -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Hiasan Meja" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">2. Luxury Table Setting</h5>
+                        <p class="text-[11px] text-stone-500">Penataan meja VIP bulat penuh susunan fresh flower tinggi, charger plate, & cutlery emas.</p>
+                    </div>
+
+                    <!-- Photo Booth -->
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-200">
+                        <div class="h-44 overflow-hidden rounded-lg mb-2">
+                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Photo Booth" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="font-bold text-stone-800 text-xs mb-1">3. Grand Interactive Photo Booth</h5>
+                        <p class="text-[11px] text-stone-500">Backdrop kemewahan ukiran / acrylic 4x3 meter, dipadukan karpet tebal & sofa sultan.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/60 rounded-xl p-6 border border-rose-100 mb-8">
+                    <h4 class="font-bold text-stone-900 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-rose-700"></i> Fasilitas & Barang Yang Di-Include:
+                    </h4>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-stone-700">
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-chair text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Kursi:</strong> &nbsp;200 Unit Kursi Tiffany / Futura Cover Elegan</li>
+                            <li class="flex items-start"><i class="fa-solid fa-table text-rose-700 mt-1 mr-2.5"></i> <strong>Jumlah Meja:</strong> &nbsp;6 Meja Bulat VIP + 1 Set Meja Akad Mewah</li>
+                            <li class="flex items-start"><i class="fa-solid fa-archway text-rose-700 mt-1 mr-2.5"></i> <strong>Pelaminan:</strong> &nbsp;Panjang 10-12 Meter Full 100% Fresh Flowers</li>
+                            <li class="flex items-start"><i class="fa-solid fa-spray-can text-rose-700 mt-1 mr-2.5"></i> <strong>Efek Khusus:</strong> &nbsp;Dry Ice Fog Machine & Firework Cold Sparkler</li>
+                        </ul>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start"><i class="fa-solid fa-lightbulb text-rose-700 mt-1 mr-2.5"></i> <strong>Pencahayaan:</strong> &nbsp;Full Professional Stage Moving Head & City Light</li>
+                            <li class="flex items-start"><i class="fa-solid fa-fan text-rose-700 mt-1 mr-2.5"></i> <strong>Pendingin:</strong> &nbsp;6 Unit AC Portable / Blower Besar</li>
+                            <li class="flex items-start"><i class="fa-solid fa-road text-rose-700 mt-1 mr-2.5"></i> <strong>Karpet:</strong> &nbsp;Full Flooring Kaca / Vinyl Putih Glossy Pelaminan</li>
+                            <li class="flex items-start"><i class="fa-solid fa-star text-rose-700 mt-1 mr-2.5"></i> <strong>Bonus WO:</strong> &nbsp;Free 4 Personil Crew Event Manager Hari-H</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-end gap-3 border-t border-stone-200 pt-4">
+                    <button onclick="closeModal('modal-3')" class="px-5 py-2.5 rounded-xl text-stone-600 hover:bg-stone-100 text-sm font-medium transition">Tutup</button>
+                    <a href="#contact" onclick="closeModal('modal-3')" class="bg-rose-800 hover:bg-rose-900 text-white px-6 py-2.5 rounded-xl text-sm font-medium transition text-center">Pesan Paket Ini Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+      <!-- ================= SEKSI GALERI ================= -->
+  <section id="gallery" class="hover:text-rose-700 transition">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="text-rose-500 text-sm font-semibold tracking-widest uppercase">Portofolio Kami</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">
+        Galeri Dekorasi & Momen Pengantin
+      </h2>
+      <div class="w-16 h-1 bg-rose-400 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Grid Foto (Dekorasi & Pengantin) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Item 1: Pelaminan -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600" 
+             alt="Pelaminan Utama" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Dekorasi</span>
+          <h3 class="text-base font-bold">Pelaminan Modern Elegant</h3>
+        </div>
+      </div>
+
+      <!-- Item 2: Pengantin di Aisle -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600" 
+             alt="Pengantin Entrance" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Momen Pengantin</span>
+          <h3 class="text-base font-bold">The Grand Entrance</h3>
+        </div>
+      </div>
+
+      <!-- Item 3: Welcome Gate -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=600" 
+             alt="Welcome Gate Floral" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Dekorasi</span>
+          <h3 class="text-base font-bold">Welcome Gate Pergola</h3>
+        </div>
+      </div>
+
+      <!-- Item 4: Akad Nikah -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" 
+             alt="Momen Akad Nikah" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Momen Pengantin</span>
+          <h3 class="text-base font-bold">Prosesi Akad Nikah Intim</h3>
+        </div>
+      </div>
+
+      <!-- Item 5: Hand Bouquet -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600" 
+             alt="Detail Bunga Pengantin" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Detail</span>
+          <h3 class="text-base font-bold">Buket Bunga & Detail Gaun</h3>
+        </div>
+      </div>
+
+      <!-- Item 6: Photobooth -->
+      <div class="group relative overflow-hidden rounded-xl shadow-md bg-white">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600" 
+             alt="Photobooth Corner" 
+             class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-xs text-rose-300 font-semibold uppercase">Dekorasi</span>
+          <h3 class="text-base font-bold">Photobooth Corner Aesthetic</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- Contact & Footer Tetap Sama -->
+    <section id="contact" class="py-20 bg-rose-950 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-xs font-semibold text-rose-300 uppercase tracking-widest">Hubungi Kami</span>
+            <h2 class="font-serif-custom text-3xl sm:text-4xl mt-2 mb-6">Mulai Diskusikan Pernikahan Impian Anda</h2>
+            <p class="text-stone-300 mb-8 max-w-lg mx-auto text-sm sm:text-base">Jadwalkan sesi konsultasi awal gratis bersama tim kami via WhatsApp atau formulir di bawah ini.</p>
+
+            <form class="space-y-4 text-left max-w-lg mx-auto bg-white/10 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-stone-200">Nama Lengkap</label>
+                    <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-stone-400 focus:outline-none focus:border-rose-400 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-stone-200">Nomor WhatsApp</label>
+                    <input type="tel" placeholder="0812xxxx" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-stone-400 focus:outline-none focus:border-rose-400 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-stone-200">Pesan / Rencana Tanggal</label>
+                    <textarea rows="3" placeholder="Ceritakan rencana pernikahan Anda..." class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-stone-400 focus:outline-none focus:border-rose-400 text-sm"></textarea>
+                </div>
+                <button type="button" class="w-full bg-rose-600 hover:bg-rose-700 text-white py-3 rounded-lg font-medium transition text-sm">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-xs border-t border-stone-800">
+        <p>&copy; 2026 Elegance Wedding Organizer. All rights reserved.</p>
+    </footer>
+
+    <!-- Swiper JS & Script Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.heroSlider', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Functions untuk membuka & menutup Modal Pop-up
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
+        window.onclick = function(event) {
+            const modals = ['modal-1', 'modal-2', 'modal-3'];
+            modals.forEach(id => {
+                const modal = document.getElementById(id);
+                if (event.target === modal) { closeModal(id); }
+            });
+        };
+    </script>
+</body>
+</html>
